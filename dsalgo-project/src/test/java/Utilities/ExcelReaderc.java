@@ -1,6 +1,5 @@
 package Utilities;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -15,7 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
-public class ExcelReader {
+public class ExcelReaderc {
 	
 	public int totalRow;
 	
@@ -48,7 +47,7 @@ public class ExcelReader {
 	
 	List<Map<String, String>> excelRows = new ArrayList<Map<String, String>>();
 	
-	for (int currentRow =1 ;currentRow < totalRow;currentRow++) {
+	for (int currentRow =1 ;currentRow <= totalRow;currentRow++) {
 		
 		row = sheet.getRow(currentRow);
 		int totalColumn	= row.getLastCellNum();

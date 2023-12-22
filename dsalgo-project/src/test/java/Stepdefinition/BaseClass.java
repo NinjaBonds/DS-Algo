@@ -9,4 +9,5 @@ public class BaseClass{
 public Homepage homepage;
 public Loginpage loginpage;
 public Arraypage array;
+
 }

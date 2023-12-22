@@ -2,7 +2,7 @@
 Feature: Sign in Page
 
   @tag1
-  Scenario: 
+  Scenario: Sign in Page
     Given User opens sign in page
     When user clicks sign in link
     Then It should display an error "Please fill out this field." below Username textbox
@@ -20,7 +20,7 @@ Feature: Sign in Page
     Then user enters homepage
 
   @tag2
-  Scenario: 
+  Scenario: Signing in and out
     Given User is in Homepage after Logged in
     When User clicks "sign out"
     Then User enters "sign in" page

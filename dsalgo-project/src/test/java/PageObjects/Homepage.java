@@ -46,7 +46,7 @@ import Utilities.Helper;
        
         //	WebDriverWait bb = new WebDriverWait(driver, Duration.ofSeconds(3));
         //	wait(TIMEOUT);
-        	System.out.println("loginb:"+wait);
+        	// System.out.println("loginb:"+wait);
         	driver.findElement(loginbut).click();
         	driver.navigate().to("https://dsportalapp.herokuapp.com/login");
         }

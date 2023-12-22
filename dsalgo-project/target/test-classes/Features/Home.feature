@@ -2,7 +2,7 @@
 Feature: Dsalgo Home Page
 
   @tag1
-  Scenario: 
+  Scenario: Dsalgo Home Page
     Given user opens DSalgo page
     When The user clicks the Get started button
     Then User enter DSalgo Home page

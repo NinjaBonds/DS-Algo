@@ -15,13 +15,14 @@ import Stepdefinition.BaseClass;
 public class Helper extends BaseClass {
     public static Helper Helper;    
     public static WebDriver driver;
-    public static WebDriverWait wait ;
+    // public static WebDriverWait 
+ ;
     public final static int TIMEOUT = 10;
     
     public Helper() {
     	if(driver == null) {
     		driver = new ChromeDriver();
-    	     wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
+    	   //  wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
     	     
     	     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
     	     driver.manage().window().maximize();																																																										driver.manage().window().maximize();
@@ -56,7 +57,7 @@ public class Helper extends BaseClass {
         driver.navigate().refresh();
        }
     public static void waitmethod() throws InterruptedException {
-    	wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));	
+    	//wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));	
     }
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

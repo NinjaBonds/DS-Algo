@@ -11,6 +11,7 @@ import Utilities.Helper;
 	    static By Registerbut = By.xpath("/html/body/div[2]/div/div[2]/a");
 	    static By signout = By.xpath("//a[@href='/logout']");
 	    protected static By loginmsg = By.xpath("/html/body/div[2]");
+	    static By errmsgpath = By.xpath("//div[@class='alert alert-primary']");
 	//	protected static String username1;
 	//	protected static String password1;
 	//  private static WebElement username;
@@ -19,7 +20,7 @@ import Utilities.Helper;
             
             //	WebDriverWait bb = new WebDriverWait(driver, Duration.ofSeconds(3));
             //	wait(TIMEOUT);
-            	System.out.println("loginb:"+wait);
+            //System.out.println("loginb:"+wait);
             	driver.findElement(signin).click();
             	driver.navigate().to("https://dsportalapp.herokuapp.com/login");
             }
@@ -45,10 +46,15 @@ import Utilities.Helper;
         	driver.findElement(Username).clear();
             final String hidden = driver.findElement(Username).getAttribute("validationMessage");
             System.out.println(hidden);
+        
             return hidden;
         	
         }
-        
+        public static String getactualerrormsg() {
+            
+        	final String errmsg = driver.findElement(errmsgpath).getText();
+            return errmsg;
+        }
         public static String clickonpasswrdrr() {
         	driver.findElement(Password).clear();
             final String hidd = driver.findElement(Password).getAttribute("validationMessage");
